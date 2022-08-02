@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LFSR Alternate Tap Positions</title>
+<meta name="KEYWORDS" content="Physics of Music, White Noise,
+LFSR, Taps, Table, maximal length sequence">
+ <style type="text/css">
+  TABLE {text-align: center}
+ </style>
+</head>
+<body bgcolor="FFFFCC">
+<h1> Alternate Tap Positions </h1>
+Here are some selected alternate tap positions which can be used with 
+cascaded 8-bit shift registers
+used in the fibonacci configuration to obtain a maximal length sequence.  These 
+are suitable for shift register IC's where outputs of registers 
+6, 7, and 8 of each circuit are available.  Cases with 2 and with 4 taps are shown.  
+(This list is not complete.)
+<br>
+<br>
+<center>
+<table border="">
+<tbody><tr><th>No. IC's</th><th>No. Registers<br> used</th><th>Taps</th>
+<th>Cycles before<br>repeat</th><th>Approx Repeat Time<br>for 100kHz Clock</th></tr>
+<tr><td>1</td><td>7</td><td>6, 7</td><td>127</td><td>1.27 ms</td></tr>
+<tr><td>2</td><td>15</td><td>8, 15</td><td>32767</td><td>328 ms</td></tr>
+<tr><td>2</td><td>15</td><td>14, 15</td><td>32767</td><td>328 ms</td></tr>
+<tr><td>3</td><td>20</td><td>17, 20</td><td>1,048,575</td><td>10 s</td></tr>
+<tr><td>3</td><td>22</td><td>8, 14, 15, 22</td><td>4,194,303</td><td>42 s</td></tr>
+<tr><td>3</td><td>23</td><td>14, 23</td><td>8,388,607</td><td>84 s</td></tr>
+<tr><td>3</td><td>23</td><td>15, 16, 22, 23</td><td>8,388,607</td><td>84 s</td></tr>
+<tr><td>3</td><td>23</td><td>14, 15, 22, 23</td><td>8,388,607</td><td>84 s</td></tr>
+<tr><td>3</td><td>23</td><td>7, 14, 22, 23</td><td>8,388,607</td><td>84 s</td></tr>
+<tr><td>3</td><td>23</td><td>7, 8, 22, 23</td><td>8,388,607</td><td>84 s</td></tr>
+<tr><td>3</td><td>24</td><td>7, 22, 23, 24</td><td>16,777,215</td><td>168 s</td></tr>
+<tr><td>3</td><td>24</td><td>7, 16, 22, 24</td><td>16,777,215</td><td>168 s</td></tr>
+<tr><td>3</td><td>24</td><td>7, 8, 22, 24</td><td>16,777,215</td><td>168 s</td></tr>
+<tr><td>3</td><td>24</td><td>6, 7, 22, 24</td><td>16,777,215</td><td>168 s</td></tr>
+<tr><td>4</td><td>31</td><td>24, 31</td><td>2,147,483,647</td><td>6 hr</td></tr>
+<tr><td>4</td><td>31</td><td>16, 24, 30, 31</td><td>2,147,483,647</td><td>6 hr</td></tr>
+<tr><td>4</td><td>31</td><td>8, 16, 24, 31</td><td>2,147,483,647</td><td>6 hr</td></tr>
+<tr><td>4</td><td>31</td><td>7, 22, 24, 31</td><td>2,147,483,647</td><td>6 hr</td></tr>
+<tr><td>4</td><td>31</td><td>8, 23, 24, 31</td><td>2,147,483,647</td><td>6 hr</td></tr>
+<tr><td>4</td><td>32</td><td>16, 23, 30, 32</td><td>4,294,967,295</td><td>11.9 hr</td></tr>
+<tr><td>4</td><td>32</td><td>6, 15, 30, 32</td><td>4,294,967,295</td><td>11.9 hr</td></tr>
+<tr><td>4</td><td>32</td><td>14, 23, 30, 32</td><td>4,294,967,295</td><td>11.9 hr</td></tr>
+<tr><td>7</td><td>55</td><td>31, 55</td><td>36,028,797,018,963,967</td><td>11,400 yr</td></tr>
+<tr><td>8</td><td>63</td><td>62, 63</td><td>9,223,372,036,854,775,807</td><td>2.9 mill yr</td></tr>
+<tr><td>10</td><td>79</td><td>70, 79</td><td> 604,462,909,807,314,587,353,087</td><td>2 x 10<sup>11</sup> yr</td></tr>
+<tr><td>13</td><td>103</td><td>94, 103</td><td>10,141,204,801,825,835,
+<br>211,973,625,643,007</td><td>3.2 x 10<sup>18 yr</sup> </td></tr>
+<tr><td>15</td><td>119</td><td>111, 119</td><td>664,613,997,892,457,936,
+<br>451,903,530,140,172,287</td><td>2.1 x 10<sup>23</sup> yr </td></tr>
+<tr><td>16</td><td>127</td><td>126, 127</td><td>170,141,183,460,469,231,
+<br>731,687,303,715,884,105,727</td><td>5.4 x 10<sup>25</sup> yr</td></tr>
+<tr><td>20</td><td>159</td><td>128, 159</td><td>730,750,818,665,451,459,101,842,<br>
+416,358,141,509,827,966,271,487</td><td>2.3 x 10<sup>35</sup> yr</td></tr>
+</tbody></table>
+</center>
+<br>
+<br>
+<br>
+Applicable Shift Registers include: 4014, 4021<br>
+Other Shift Registers which can be used include: 74164, 74595, 74599, 4094<br>
+(Though additional circuitry may be necessary.)
+<br>
+The current best estimate of the age of the universe is 13.8 x 10<sup>9</sup> yr.
+<br><br>
+Questions/Comments to:
+<a href="mailto:suits@mtu.edu?SUBJECT=Tap%20Positions">suits@mtu.edu</a><br>
+<p>
+</p><hr>
+<a href="https://pages.mtu.edu/~suits/LFSR.html">Back to Circuit Diagram</a><br>
+<a href="https://pages.mtu.edu/~suits/Physicsofmusic.html">Back to Physics of Music Notes</a><br>
+<a href="https://pages.mtu.edu/~suits/index.html">To Suits Page</a><br>
+<a href="https://pages.mtu.edu/~suits/PH1090">To PH1090 course page</a><br>
+<a href="http://www.phy.mtu.edu/">To MTU Physics Home </a><br>
+<a href="https://pages.mtu.edu/~suits/PofMCopyRight.html">Copyright Info</a>
+
+
+</body></html>

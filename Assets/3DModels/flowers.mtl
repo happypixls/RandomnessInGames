@@ -1,0 +1,14 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl grass
+Kd 0.1058824 0.7529412 0.5254902
+
+newmtl _defaultMat
+Kd 1 1 1
+
+newmtl heart
+Kd 0.9764706 0.2901961 0.372549
+
+newmtl snow
+Kd 0.7411765 0.9333333 1
+

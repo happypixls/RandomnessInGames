@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0e70aab394ab845962a3fc6585ff67, type: 3}
+  m_Name: 03 - LFSR random
+  m_EditorClassIdentifier: 
+  <RandomRange>k__BackingField: {x: 0, y: 0}
+  <SquareSize>k__BackingField: {x: 100, y: 100}
+  Prefab1: {fileID: 6693457332679103859, guid: 9b8a983ecbb2cee4fbaeb62b48584384, type: 3}
+  Prefab2: {fileID: 6693457332679103859, guid: 6e761479cc8e5d340b9482860224ddc0, type: 3}

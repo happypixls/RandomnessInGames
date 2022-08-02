@@ -1,0 +1,8 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl rock
+Kd 0.6666667 0.6862745 0.7568628
+
+newmtl _defaultMat
+Kd 1 1 1
+
