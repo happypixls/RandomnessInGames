@@ -1,5 +1,5 @@
 # Go random with random generation algoriths
-Game dev guild 2023
+### Game dev guild 2023
 
 - This project is a quick demo of several random number generators algorithms that are commonly used in game dev.
 - Use this for good not for evil and keep those pixels happy  :)
