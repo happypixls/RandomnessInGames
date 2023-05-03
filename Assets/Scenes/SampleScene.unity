@@ -201,13 +201,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 25.93, z: 0}
+  m_LocalRotation: {x: 0.24159512, y: -0, z: -0, w: 0.97037715}
+  m_LocalPosition: {x: 0, y: 5.4, z: -8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 27.961, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +231,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -252,8 +254,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9036e86f150f5474ab37337004ed7231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <DragSpeed>k__BackingField: 0
-  <ScrollSpeed>k__BackingField: 10
+  dragSpeed: 58
+  scrollSpeed: 0.5
+--- !u!1 &406694586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406694587}
+  - component: {fileID: 406694588}
+  m_Layer: 0
+  m_Name: 08-LFSRRandom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406694587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406694586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406694588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406694586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c483cefdada2914aa40a1a00e47059f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: {x: 100, y: 100}
+  prefab1: {fileID: 6693457332679103859, guid: 6e761479cc8e5d340b9482860224ddc0, type: 3}
+  prefab2: {fileID: 6693457332679103859, guid: 184b4e652e6d9c84eb10355cbacdb3d5, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,9 +393,10 @@ Transform:
   m_LocalRotation: {x: 0.54355365, y: -0.67234635, z: -0.10452837, w: 0.49150136}
   m_LocalPosition: {x: 0, y: 10.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 23.188, y: -122.582, z: -65.085}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -360,4 +410,782 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 1
   m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &462092343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462092346}
+  - component: {fileID: 462092345}
+  - component: {fileID: 462092344}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!154 &462092344
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462092343}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 1d7bc0c115a432241babc66e3e3da672, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &462092345
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462092343}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 1d7bc0c115a432241babc66e3e3da672, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+--- !u!4 &462092346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462092343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -256, y: 0, z: -256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &569069335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569069337}
+  - component: {fileID: 569069336}
+  m_Layer: 0
+  m_Name: 07.2-MarkovChain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569069336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569069335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251d9a79242e96946b4dbb5be8310ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 4
+  sampleText: '# # # # # # # # # # # # # # # #
+
+    # . . . . . # # # # # # # # #
+    #
+
+    # # # # # . . . . . . . . . # #
+
+    # . . . . . . . . . . . . . . #
+
+    #
+    # # . . . . . . . . . . . # #
+
+    # . . . . . # # # # . . . . # #
+
+    # . .
+    . . . . . . . . # # . . #
+
+    # # # # # # # # . . . . . . . #
+
+    # . . . .
+    . . . . . . # # # # #
+
+    # . . . . # # # # # . . . . . #
+
+    # . . . . . .
+    . . . . . . . . #
+
+    # . . . . . # # # # # # # # # #
+
+    # # # # # . . . .
+    . . . . . # #
+
+    # . . . . . . . . . . . . . . #
+
+    # . . . . . # # # # #
+    # # # # #
+
+    # # # # # . . . . . . . . . # #
+
+    # . . . . . . . . . . . .
+    . . #
+
+    # # # . . . . . . . . . . . # #
+
+    # . . . . . # # # # . . . . #
+    #
+
+    # . . . . . . . . . . # # . . #
+
+    # # # # # # # # . . . . . . . #
+
+    #
+    . . . . . . . . . . # # # # #
+
+    # . . . . # # # # # . . . . . #
+
+    # . .
+    . . . . . . . . . . . . #
+
+    # . . . . . # # # # # # # # # #
+
+    # # # # #
+    . . . . . . . . . # #
+
+    # . . . . . . . . . . . . . . #
+
+    # # # # # # #
+    # # # # # # # # #'
+  generatedText: 
+--- !u!4 &569069337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569069335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &600160562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600160564}
+  - component: {fileID: 600160563}
+  m_Layer: 0
+  m_Name: 03-NoiseRandom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &600160563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600160562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ac99dc4ca747545b8154cd19a6092a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRange: {x: 5, y: 5}
+  scarcityFactor: 0
+  squareSize: {x: 50, y: 50}
+  prefab1: {fileID: 8069900229835681551, guid: 97fc49d8576874e48b09c1f55a5d2f29, type: 3}
+  prefab2: {fileID: 2057969904125984573, guid: 2f37946ef33274047a5be1bf849c873b, type: 3}
+  prefab3: {fileID: 759871651873707349, guid: eaab7752b0ca8314b8d297091cd7f767, type: 3}
+  prefab4: {fileID: 759871651873707349, guid: d8ff32cec3229ce4d92dcf682fc94a1f, type: 3}
+  prefab5: {fileID: 97140494218410074, guid: 37e5bc7e21f0cb14ab172047a47f39c4, type: 3}
+--- !u!4 &600160564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600160562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1094006400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094006401}
+  - component: {fileID: 1094006404}
+  - component: {fileID: 1094006403}
+  - component: {fileID: 1094006402}
+  m_Layer: 0
+  m_Name: 05-ReactionDiffusion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1094006401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094006400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.712, z: 0}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1094006402
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094006400}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1094006403
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094006400}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cd496ae5eedb88a41bc009bc1af79380, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1094006404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094006400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24a96d7a8efcbb43b26e9663583942a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 512
+  height: 512
+  config: {fileID: 11400000, guid: 20dd72f70e63e1542b8c83577772789a, type: 2}
+  terrain: {fileID: 462092345}
+  textureUpdaterComputeShader: {fileID: 7200000, guid: c1e53d200b6d61a4ab82a16823fcd2f4,
+    type: 3}
+  invertColors: 0
+  enableRDToTerrain: 0
+--- !u!1 &1104715167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104715168}
+  m_Layer: 0
+  m_Name: --->Randomizers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104715168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104715167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34071994, y: 0.5494113, z: -0.13085508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1113747234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1113747235}
+  - component: {fileID: 1113747236}
+  m_Layer: 0
+  m_Name: 04-ShuffleBagRandom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1113747235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113747234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1113747236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113747234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927d0f1b468e72845ace01d5f423c2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ratios>k__BackingField: {x: 1, y: 2, z: 7}
+  prefab1: {fileID: 2835359383565997957, guid: 26c13849acf41b148b343f420caa10e1, type: 3}
+  prefab2: {fileID: 2835359383565997957, guid: c6cb01d83c3d4c84185fcda6614a7b0c, type: 3}
+  prefab3: {fileID: 2835359383565997957, guid: 2d6f17a78e8a7a94fb8bb6c6c647d024, type: 3}
+--- !u!1 &1116617165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116617166}
+  m_Layer: 0
+  m_Name: --->SceneObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1116617166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116617165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34071994, y: 0.5494113, z: -0.13085508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1391908506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1391908508}
+  - component: {fileID: 1391908507}
+  m_Layer: 0
+  m_Name: 02-RandomWithRule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1391908507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391908506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094b6051182112741857ab97cc21f58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squareSize: {x: 10, y: 10}
+  prefabs:
+  - {fileID: 601669564991677739, guid: 258e05a3c1187b5488ec766fbabee3f9, type: 3}
+  - {fileID: 6882582646153238999, guid: 6c36a43b8543fd04fb5d5e3f449c2f92, type: 3}
+--- !u!4 &1391908508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391908506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1560707658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560707659}
+  - component: {fileID: 1560707660}
+  m_Layer: 0
+  m_Name: 07.1-MarkovChain-Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1560707659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560707658}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1560707660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560707658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 251d9a79242e96946b4dbb5be8310ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 4
+  sampleText: "The crimson disk of the Sun has plunged beneath the Ocean. The sea
+    has decked itself with the burning colors of the orb, reflected from the Heavens
+    in a mirror of turquoise and emerald. The rolling waves are gold and silver,
+    and break noisily on a shore already darkened by the disappearance of the celestial
+    luminary. We gaze regretfully after the star of day, that poured its cheerful
+    rays anon so generously over many who were intoxicated with gaiety and happiness.
+    We dream, contemplating the magnificent spectacle, and in dreaming forget the
+    moments that are rapidly flying by. Yet the darkness gradually increases, and
+    twilight gives way to night. The most indifferent spectator of the setting Sun
+    as it descends beneath the waves at the far horizon, could hardly be unmoved
+    by the pageant of Nature at such an impressive moment. The light of the Crescent
+    Moon, like some fairy boat suspended in the sky, is bright enough to cast changing
+    and dancing sparkles of silver upon the ocean. The  Evening Star declines slowly
+    in its turn toward the western horizon. Our gaze is held by a shining world that
+    dominates the whole of the occidental heavens. This is the \"Shepherd's Star,\"
+    Venus of rays translucent. Little by little, one by one, the more brilliant stars
+    shine out. Here are the white Vega of the Lyre, the burning Arcturus, the seven
+    stars of the Great Bear, a whole sidereal population catching fire, like innumerable
+    eyes that open on the Infinite. It is a new life that is revealed to our imagination,
+    inviting us to soar into these mysterious regions. O Night, diapered with fires
+    innumerable! hast thou not written in flaming letters on these Constellations
+    the syllables of the great enigma of Eternity? The contemplation of thee is a
+    wonder and a charm. How rapidly canst thou efface the regrets we suffered on
+    the departure of our beloved Sun! What wealth, what beauty hast thou not reserved
+    for our enraptured souls! Where is the man that can remain blind to such a pageant
+    and deaf to its language! To whatever quarter of the Heavens we look, the splendors
+    of the night are revealed to our astonished gaze. These celestial eyes seem in
+    their turn to gaze at, and to question us. Thus indeed have they questioned every
+    thinking soul, so long as Humanity has existed on our Earth. Homer saw and sung
+    these self-same stars. They shone upon the slow succession of civilizations that
+    have disappeared, from Egypt of the period of the Pyramids, Greece at the time
+    of the Trojan War, Rome and Carthage, Constantine and Charlemagne, down to the
+    Twentieth Century. The generations are buried with the dust of their ancient
+    temples. The Stars are still there, symbols of Eternity. The silence of the vast
+    and starry Heavens may terrify us; its immensity may seem to overwhelm us. But
+    our inquiring thought flies curiously on the wings of dream, toward the remotest
+    regions of the visible. It rests on one star and another, like the butterfly
+    on the flower. It seeks what will best respond to its aspirations: and thus a
+    kind of communication is established, and, as it were, protected by all Nature
+    in these silent appeals. Our sense of solitude has disappeared. We feel that,
+    if only as infinitesimal atoms, we form part of that immense universe, and this
+    dumb language of the starry night is more eloquent than any speech. Each star
+    becomes a friend, a discreet confidant, often indeed a precious counsellor, for
+    all the thoughts it suggests to us are pure and holy. Is any poem finer than
+    the book written in letters of fire upon the tablets of the firmament? Nothing
+    could be more ideal. And yet, the poetic sentiment that the beauty of Heaven
+    awakens in our soul ought not to veil its reality from us. That is no less marvelous
+    than the mystery by which we were enchanted.And here we may ask ourselves how
+    many there are, even among thinking human beings, who ever raise their eyes to
+    the starry heavens? How many men and women are sincerely, and with unfeigned
+    curiosity, interested in these shining specks, and inaccessible luminaries, and
+    really desirous of a better acquaintance with them? Seek, talk, ask in the intercourse
+    of daily life. You, who read these pages, who already love the Heavens, and comprehend
+    them, who desire to account for our existence in this world, who seek to know
+    what the Earth is, and what Heaven\u2014you shall witness that the number of
+    those inquiring after truth is so limited that no one dares to speak of it, so
+    disgraceful is it to the so-called intelligence of our race. And yet! the great
+    Book of the Heavens is open to all eyes. What pleasures await us in the study
+    of the Universe! Nothing could speak more eloquently to our heart and intellect!
+    Astronomy is the science par excellence. It is the most beautiful and most ancient
+    of all, inasmuch as it dates back to the indeterminate times of highest antiquity.
+    Its mission is not only to make us acquainted with the innumerable orbs by which
+    our nights are illuminated, but it is, moreover, thanks to it that we know where
+    and what we are. Without it we should live as the blind, in eternal ignorance
+    of the very conditions of our terrestrial existence. Without it we should still
+    be penetrated with the na\xEFve error that reduced the entire Universe to our
+    minute globule, making our Humanity the goal of the Creation, and should have
+    no exact notion of the immense reality. To-day, thanks to the intellectual labor
+    of so many centuries, thanks also to the immortal genius of the men of science
+    who have devoted their lives to searching after Truth\u2014men such as Copernicus,
+    Galileo, Kepler, Newton\u2014the veil of ignorance has been rent, and glimpses
+    of the marvels of creation are perceptible in their splendid truth to the dazzled
+    eye of the thinker. The study of Astronomy is not, as many suppose, the sacrifice
+    of oneself in a cerebral torture that obliterates all the beauty, the fascination,
+    and the grandeur of the pageant of Nature. Figures, and naught but figures, would
+    not be entertaining, even to those most desirous of instruction. Let the reader
+    take courage! We do not propose that he shall decipher the hieroglyphics of algebra
+    and geometry. Perish the thought! For the rest, figures are but the scaffolding,
+    the method, and do not exist in Nature."
+  generatedText: You, who read these  pages, who already love  the Heavens, and comprehend 
+    them, who desire to  the indeterminate times of  the vast and starry  heavens?
+    How many men  and women are sincerely,  and with unfeigned curiosity,  interested
+    in these shining  specks, and inaccessible luminaries,  and really desirous of 
+    communication is established, and,  as it were, protected  by all Nature in 
+    a cerebral torture that  we know where and  deaf to its language!  To whatever
+    quarter of  their ancient temples. The
+--- !u!1 &1614289547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614289548}
+  - component: {fileID: 1614289549}
+  m_Layer: 0
+  m_Name: 01-BoringRandom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1614289548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614289547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614289549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614289547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962a28352da0e264eba3396f24478d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRange: {x: 0, y: 1}
+  bias: 0.918
+  squareSize: {x: 10, y: 10}
+  prefabs:
+  - {fileID: 601669564991677739, guid: 258e05a3c1187b5488ec766fbabee3f9, type: 3}
+  - {fileID: 6882582646153238999, guid: 6c36a43b8543fd04fb5d5e3f449c2f92, type: 3}
+  shouldInstantiateBias: 0
+--- !u!1 &1616128928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616128929}
+  - component: {fileID: 1616128930}
+  m_Layer: 0
+  m_Name: 06-RandomColors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1616128929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616128928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616128930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616128928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf4bf635cde2a64489b53f8825c0d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomRange: {x: 0.45, y: 1.5}
+  squareSize: {x: 20, y: 20}
+  colorToOffsetFrom: {r: 0.023529412, g: 0.1882353, b: 0, a: 1}
+  color1: {r: 0.9529412, g: 0.20392157, b: 0.29803923, a: 1}
+  color2: {r: 0, g: 1, b: 0.15686275, a: 1}
+  color3: {r: 0, g: 0.16078432, b: 0.9254902, a: 1}
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 0.5, g: 0.125, b: 0.19078189, a: 1}
+    key1: {r: 0, g: 0.6591742, b: 1, a: 1}
+    key2: {r: 1, g: 0.8895351, b: 0, a: 1}
+    key3: {r: 1, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32189
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 31997
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 3
+  offset: 0.5
+  greyControl: 0.5
+  prefab1: {fileID: 4062139740484227026, guid: 37d0d73a3afc8384ca085f1807f7160f, type: 3}
+  prefab2: {fileID: 6065514384571193707, guid: 00b5bbff9e365984288718b7ea7dde05, type: 3}

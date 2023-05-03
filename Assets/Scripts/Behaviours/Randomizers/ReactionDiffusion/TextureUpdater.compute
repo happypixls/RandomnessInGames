@@ -1,0 +1,61 @@
+#pragma kernel TextureUpdater
+
+struct RDCellS
+{
+    float a;
+    float b;
+};
+
+int width;
+int height;
+float dA;
+float dB;
+float f;
+float k;
+
+RWStructuredBuffer<RDCellS> nextGrid;
+StructuredBuffer<RDCellS> currentGrid;
+
+float LaplacianA(int2 pos)
+{
+    float sum = 0.0f;
+    sum += -1.0f * currentGrid[pos.y * width + pos.x].a;
+    sum += 0.2f * currentGrid[pos.y * width + (pos.x + 1)].a;
+    sum += 0.2f * currentGrid[pos.y * width + (pos.x - 1)].a;
+    sum += 0.2f * currentGrid[(pos.y + 1) * width + pos.x].a;
+    sum += 0.2f * currentGrid[(pos.y - 1) * width + pos.x].a;
+    sum += 0.05f * currentGrid[(pos.y + 1) * width + (pos.x + 1)].a;
+    sum += 0.05f * currentGrid[(pos.y - 1) * width + (pos.x + 1)].a;
+    sum += 0.05f * currentGrid[(pos.y + 1) * width + (pos.x - 1)].a;
+    sum += 0.05f * currentGrid[(pos.y - 1) * width + (pos.x - 1)].a;
+    return sum;
+}
+
+float LaplacianB(int2 pos)
+{
+    float sum = 0.0f;
+    sum += -1.0f * currentGrid[pos.y * width + pos.x].b;
+    sum += 0.2f * currentGrid[pos.y * width + (pos.x + 1)].b;
+    sum += 0.2f * currentGrid[pos.y * width + (pos.x - 1)].b;
+    sum += 0.2f * currentGrid[(pos.y + 1) * width + pos.x].b;
+    sum += 0.2f * currentGrid[(pos.y - 1) * width + pos.x].b;
+    sum += 0.05f * currentGrid[(pos.y + 1) * width + (pos.x + 1)].b;
+    sum += 0.05f * currentGrid[(pos.y - 1) * width + (pos.x + 1)].b;
+    sum += 0.05f * currentGrid[(pos.y + 1) * width + (pos.x - 1)].b;
+    sum += 0.05f * currentGrid[(pos.y - 1) * width + (pos.x - 1)].b;
+    return sum;
+}
+
+[numthreads(8,8,1)]
+void TextureUpdater (uint3 id : SV_DispatchThreadID)
+{
+    int2 pos = int2(id.xy);
+    RDCellS current = currentGrid[id.y * width + id.x];
+    float a = current.a;
+    float b = current.b;
+
+    float nextA = a + (dA * LaplacianA(pos) - (a * b * b) + (f * (1 - a)));
+    float nextB = b + (dB * LaplacianB(pos) + (a * b * b) - ((k + f) * b));
+    nextGrid[pos.y * width + pos.x].a = nextA;
+    nextGrid[pos.y * width + pos.x].b = nextB;
+}

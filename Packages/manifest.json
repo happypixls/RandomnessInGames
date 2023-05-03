@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
-    "com.unity.collab-proxy": "1.15.15",
-    "com.unity.ide.rider": "3.0.15",
+    "com.happypixels.editoraddons": "https://github.com/happypixls/unity-editor-addons.git",
+    "com.unity.collab-proxy": "2.0.3",
+    "com.unity.ide.rider": "3.0.18",
     "com.unity.ide.vscode": "1.2.5",
-    "com.unity.render-pipelines.universal": "10.5.1",
+    "com.unity.render-pipelines.universal": "12.1.11",
     "com.unity.test-framework": "1.1.31",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
