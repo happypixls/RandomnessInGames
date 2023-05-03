@@ -11,3 +11,6 @@ For the wave function collapse algorithm, checkout these links:
 - https://bolddunkley.itch.io/wave-function-collapse
 - https://bolddunkley.itch.io/wfc-mixed
 - https://selfsame.itch.io/unitywfc
+
+
+All 3D models are from Kenny! (https://www.kenney.nl/)
