@@ -2,8 +2,7 @@
   "dependencies": {
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
     "com.happypixels.editoraddons": "https://github.com/happypixls/unity-editor-addons.git",
-    "com.unity.collab-proxy": "2.0.3",
-    "com.unity.ide.rider": "3.0.18",
+    "com.unity.ide.rider": "3.0.21",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.render-pipelines.universal": "12.1.11",
     "com.unity.test-framework": "1.1.31",

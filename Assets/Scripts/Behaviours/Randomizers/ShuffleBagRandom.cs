@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using NaughtyAttributes;
-using StoryOfRandom.Core;
+using StoryOfRandom.Core.Collections;
 using UnityEngine;
 
 namespace StoryOfRandom.Behaviours.Randomizers
